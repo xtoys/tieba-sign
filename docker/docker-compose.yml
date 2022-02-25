@@ -1,0 +1,10 @@
+version: '3'
+services:
+  tieba-sign:
+    image: xtoys/tieba-sign:latest
+    container_name: tieba-sign
+    network_mode: bridge
+    hostname: tieba-sign
+    restart: unless-stopped
+    environment:
+      - BDUSS="xxxxxxxxx#zzzzzzzzz" # 支持同时添加多个帐户，BDUSS 之间用 # 隔开即可
